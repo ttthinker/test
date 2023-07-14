@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Music Data Mining 1(Sound)</title>
+    <link href="/2023/07/13/Music-Data-Mining-1-Sound/"/>
+    <url>/2023/07/13/Music-Data-Mining-1-Sound/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Sound"><a href="#Sound" class="headerlink" title="Sound"></a>Sound</h3><ul><li>Basic Idea:</li></ul><p>Sound is created when air molecules are set into motion by some kind of vibration. The resulting changes in air pressure can be represented as a continuous signal over time. In order to represent the continuous process in a finite amount of memory the continuous signal is sampled at regular periodic intervals. The resulting sequence of samples which still has continuous values is then converted to a sequence of discretised samples through the process of quantization. </p><ul><li>Example:</li></ul><p>CD quality audio has a sampling rate of 44,100 Hz and a dynamic range of 16 bit. This means each second of sound is represented as 44,100 samples equally spaced in time and each one of those samples is represented by 16 bits.</p><ul><li>Nyquist-Shannon sampling theorem</li></ul><p>If a function $x(t)$ contains no frequencies higher than $B$ Hertz, it can be completely reconstructed from a series of points spaced $\frac{1}{2B}$ seconds apart.</p><p>What this means is that if the highest frequency we are interested in is $B$ Hertz then we need to sample the signal at $2B$ Hertz or higher. As the data rates of audio signals are very high this has important implications.</p><ul><li>Example</li></ul><p>Telephone quality speech typically has a sampling rate of 16,000 Hz whereas CD audio has 44,100 Hz.</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Shelter</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>传习录选</title>
     <link href="/2023/01/04/%E4%BC%A0%E4%B9%A0%E5%BD%95%E9%80%89/"/>
     <url>/2023/01/04/%E4%BC%A0%E4%B9%A0%E5%BD%95%E9%80%89/</url>
