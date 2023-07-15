@@ -16,22 +16,22 @@
   <meta name="author" content="无心道人">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Sound Basic Idea:  Sound is created when air molecules are set into motion by some kind of vibration. The resulting changes in air pressure can be represented as a continuous signal over time. In orde">
+    <meta name="description" content="Audio Representation Basic Idea  To analyze music stored as a recorded audio signal we need to devise rep- resentations that roughly correspond to how we perceive sound through the auditory system.  A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Music Data Mining 1(Sound)">
-<meta property="og:url" content="https://ttthinker.github.io/2023/07/13/Music-Data-Mining-1-Sound/index.html">
+<meta property="og:title" content="Music Data Mining 2(Audio Representation)">
+<meta property="og:url" content="https://ttthinker.github.io/2023/07/15/Music-Data-Mining-2-Audio-Representation/index.html">
 <meta property="og:site_name" content="蓬室">
-<meta property="og:description" content="Sound Basic Idea:  Sound is created when air molecules are set into motion by some kind of vibration. The resulting changes in air pressure can be represented as a continuous signal over time. In orde">
+<meta property="og:description" content="Audio Representation Basic Idea  To analyze music stored as a recorded audio signal we need to devise rep- resentations that roughly correspond to how we perceive sound through the auditory system.  A">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-13T15:47:12.000Z">
-<meta property="article:modified_time" content="2023-07-13T16:20:45.396Z">
+<meta property="article:published_time" content="2023-07-15T04:01:25.000Z">
+<meta property="article:modified_time" content="2023-07-15T04:36:04.220Z">
 <meta property="article:author" content="无心道人">
 <meta property="article:tag" content="Shelter">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Music Data Mining 1(Sound) - 蓬室</title>
+  <title>Music Data Mining 2(Audio Representation) - 蓬室</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Music Data Mining 1(Sound)"></span>
+            <span id="subtitle" data-typed-text="Music Data Mining 2(Audio Representation)"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-13 23:47" pubdate>
-          2023年7月13日 晚上
+        <time datetime="2023-07-15 12:01" pubdate>
+          2023年7月15日 中午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.4k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          9 分钟
+          12 分钟
         
       </span>
     
@@ -273,28 +273,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Music Data Mining 1(Sound)</h1>
+            <h1 style="display: none">Music Data Mining 2(Audio Representation)</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="Sound"><a href="#Sound" class="headerlink" title="Sound"></a>Sound</h3><ul>
-<li>Basic Idea:</li>
+                <h3 id="Audio-Representation"><a href="#Audio-Representation" class="headerlink" title="Audio Representation"></a>Audio Representation</h3><ul>
+<li><strong>Basic Idea</strong></li>
 </ul>
-<p>Sound is created when air molecules are set into motion by some kind of vibration. The resulting changes in air pressure can be represented as a continuous signal over time. In order to represent the continuous process in a finite amount of memory the continuous signal is sampled at regular periodic intervals. The resulting sequence of samples which still has continuous values is then converted to a sequence of discretised samples through the process of quantization. </p>
+<p>To analyze music stored as a recorded audio signal we need to devise rep- resentations that roughly correspond to how we perceive sound through the auditory system. </p>
+<p>At a fundamental level, such audio representations will help determine when things happen in time and how fast they repeat (frequency). Therefore, the foundation of any audio analysis algorithm is a representa- tion that is structured around time and frequency.</p>
 <ul>
-<li>Example:</li>
+<li><strong>STFT</strong></li>
 </ul>
-<p>CD quality audio has a sampling rate of 44,100 Hz and a dynamic range of 16 bit. This means each second of sound is represented as 44,100 samples equally spaced in time and each one of those samples is represented by 16 bits.</p>
+<p>The short-time Fourier transform (<strong>STFT</strong>) is arguably the most common time-frequency representation and has been widely used in many domains in addition to music processing. In addition, other audio feature representations such as the Mel-frequency cepstral coefficients (<strong>MFCCs</strong>) and chroma are based on the <strong>STFT</strong>. An important factor in the wide use of the <strong>STFT</strong> is the high speed with which it can be computed in certain cases when using the fast Fourier transform (<strong>FFT</strong>)  algorithm.</p>
+<p>The fundamental idea behind the short-time Fourier transform (<strong>STFT</strong>) as well as many other time-frequency representations is to express a signal as a linear combination of basic elementary signals that can be more easily understood and manipulated. </p>
 <ul>
-<li>Nyquist-Shannon sampling theorem</li>
+<li><strong>DFT</strong></li>
 </ul>
-<p>If a function $x(t)$ contains no frequencies higher than $B$ Hertz, it can be completely reconstructed from a series of points spaced $\frac{1}{2B}$ seconds apart.</p>
-<p>What this means is that if the highest frequency we are interested in is $B$ Hertz then we need to sample the signal at $2B$ Hertz or higher. As the data rates of audio signals are very high this has important implications.</p>
-<ul>
-<li>Example</li>
-</ul>
-<p>Telephone quality speech typically has a sampling rate of 16,000 Hz whereas CD audio has 44,100 Hz.</p>
+<p>The <strong>DFT</strong> has its origins in the Fourier series in which any complicated continuous periodic function can be written as an infinite discrete sum of sine and cosine signals. Similarly, the <strong>DFT</strong> can be viewed as a similar process of representing any finite, discrete signal (properties required for processing by a computer) by a finite, discrete sum of discretized sine and cosine signals. Figure 2.1(a) shows such a simple sinusoidal signal.</p>
 
                 
               </div>
@@ -319,8 +316,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Music Data Mining 1(Sound)</div>
-      <div>https://ttthinker.github.io/2023/07/13/Music-Data-Mining-1-Sound/</div>
+      <div>Music Data Mining 2(Audio Representation)</div>
+      <div>https://ttthinker.github.io/2023/07/15/Music-Data-Mining-2-Audio-Representation/</div>
     </div>
     <div class="license-meta">
       
@@ -332,7 +329,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月13日</div>
+          <div>2023年7月15日</div>
         </div>
       
       
@@ -364,18 +361,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/15/Music-Data-Mining-2-Audio-Representation/" title="Music Data Mining 2(Audio Representation)">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Music Data Mining 2(Audio Representation)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/01/04/%E4%BC%A0%E4%B9%A0%E5%BD%95%E9%80%89/" title="传习录选">
-                        <span class="hidden-mobile">传习录选</span>
+                      <a href="/2023/07/13/Music-Data-Mining-1-Sound/" title="Music Data Mining 1(Sound)">
+                        <span class="hidden-mobile">Music Data Mining 1(Sound)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

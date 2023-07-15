@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Music Data Mining 2(Audio Representation)</title>
+    <link href="/2023/07/15/Music-Data-Mining-2-Audio-Representation/"/>
+    <url>/2023/07/15/Music-Data-Mining-2-Audio-Representation/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Audio-Representation"><a href="#Audio-Representation" class="headerlink" title="Audio Representation"></a>Audio Representation</h3><ul><li><strong>Basic Idea</strong></li></ul><p>To analyze music stored as a recorded audio signal we need to devise rep- resentations that roughly correspond to how we perceive sound through the auditory system. </p><p>At a fundamental level, such audio representations will help determine when things happen in time and how fast they repeat (frequency). Therefore, the foundation of any audio analysis algorithm is a representa- tion that is structured around time and frequency.</p><ul><li><strong>STFT</strong></li></ul><p>The short-time Fourier transform (<strong>STFT</strong>) is arguably the most common time-frequency representation and has been widely used in many domains in addition to music processing. In addition, other audio feature representations such as the Mel-frequency cepstral coefficients (<strong>MFCCs</strong>) and chroma are based on the <strong>STFT</strong>. An important factor in the wide use of the <strong>STFT</strong> is the high speed with which it can be computed in certain cases when using the fast Fourier transform (<strong>FFT</strong>)  algorithm.</p><p>The fundamental idea behind the short-time Fourier transform (<strong>STFT</strong>) as well as many other time-frequency representations is to express a signal as a linear combination of basic elementary signals that can be more easily understood and manipulated. </p><ul><li><strong>DFT</strong></li></ul><p>The <strong>DFT</strong> has its origins in the Fourier series in which any complicated continuous periodic function can be written as an infinite discrete sum of sine and cosine signals. Similarly, the <strong>DFT</strong> can be viewed as a similar process of representing any finite, discrete signal (properties required for processing by a computer) by a finite, discrete sum of discretized sine and cosine signals. Figure 2.1(a) shows such a simple sinusoidal signal.</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Shelter</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Music Data Mining 1(Sound)</title>
     <link href="/2023/07/13/Music-Data-Mining-1-Sound/"/>
     <url>/2023/07/13/Music-Data-Mining-1-Sound/</url>
