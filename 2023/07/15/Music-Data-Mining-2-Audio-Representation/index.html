@@ -24,7 +24,7 @@
 <meta property="og:description" content="Audio RepresentationBasic IdeaTo analyze music stored as a recorded audio signal we need to devise representations that roughly correspond to how we perceive sound through the auditory system.  At a f">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-15T04:01:25.000Z">
-<meta property="article:modified_time" content="2023-07-18T05:21:28.933Z">
+<meta property="article:modified_time" content="2023-07-18T13:15:13.572Z">
 <meta property="article:author" content="无心道人">
 <meta property="article:tag" content="Shelter">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          2.4k 字
         
       </span>
     
@@ -284,7 +284,7 @@
 <p>As the goal of audio feature extraction is analysis, typically a lot of information needs to be discarded and therefore perfect reconstruction is not as important.</p>
 <h3 id="DFT"><a href="#DFT" class="headerlink" title="DFT"></a>DFT</h3><p>The <strong>DFT</strong> has its origins in the Fourier series in which any complicated continuous periodic function can be written as an infinite discrete sum of sine and cosine signals. Similarly, the <strong>DFT</strong> can be viewed as a similar process of representing any finite, discrete signal (properties required for processing by a computer) by a finite, discrete sum of discretized sine and cosine signals.</p>
 <h3 id="STFT"><a href="#STFT" class="headerlink" title="STFT"></a>STFT</h3><p>The short-time Fourier transform (<strong>STFT</strong>) is arguably the most common time-frequency representation and has been widely used in many domains in addition to music processing. In addition, other audio feature representations such as the Mel-frequency cepstral coefficients (<strong>MFCCs</strong>) and chroma are based on the <strong>STFT</strong>. An important factor in the wide use of the <strong>STFT</strong> is the high speed with which it can be computed in certain cases when using the fast Fourier transform (<strong>FFT</strong>)  algorithm.</p>
-<p>The fundamental idea behind the short-time Fourier transform (<strong>STFT</strong>) as well as many other time-frequency representations is to express a signal as a linear combination of basic elementary signals that can be more easily understood and manipulated. </p>
+<p>It is essentially a discrete Fourier transform (<strong>DFT</strong>) adapted to provide localization in time and the fundamental idea behind the short-time Fourier transform (<strong>STFT</strong>) as well as many other time-frequency representations is to express a signal as a linear combination of basic elementary signals that can be more easily understood and manipulated. </p>
 <p>It is possible to calculate the DFT of an entire audio clip and show how the energy of the signal is distributed among different frequencies. However, such an analysis would provide no information about when these frequencies start and stop in time. The idea behind the STFT is to process small segments of the audio clip at a time and the DFT of each segment. The output of the DFT is called a spectrum. The resulting sequence of spectrums (or spectra) contains information about time as well as frequency. The process of obtaining a small segment from a long audio signal can be viewed as a multiplication of the original audio signal with signal that has the value 1 during the time period of interest and the value 0 outside it. Such a signal is called a rectangular window.</p>
 
                 
@@ -355,9 +355,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/18/%E8%A1%8C%E6%9C%89%E4%B8%8D%E5%BE%97%EF%BC%8C%E5%8F%8D%E6%B1%82%E8%AF%B8%E5%B7%B1/" title="行有不得，反求诸己">
+                      <a href="/2023/07/18/%E5%A3%B0%E9%9F%B3%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%901/" title="声音数据分析1">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">行有不得，反求诸己</span>
+                        <span class="hidden-mobile">声音数据分析1</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
