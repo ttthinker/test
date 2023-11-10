@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Public Finance Review 1 (Welfare Economics)</title>
+    <link href="/2023/11/10/Public-Finance-Review-1-Welfare-Economics/"/>
+    <url>/2023/11/10/Public-Finance-Review-1-Welfare-Economics/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Welfare-Economics"><a href="#Welfare-Economics" class="headerlink" title="Welfare Economics"></a>Welfare Economics</h3><ul><li><p><strong>Definition</strong></p><ul><li><p>The brunch of economic theory concerned with the social desirability of alternative economic state.</p></li><li><p>The theory is used to distinguish the circumstances under which markets can be expected to perform well from those under which markets fail to produce desirable results.</p></li></ul></li><li><p><strong>Pure Economy Exchange</strong></p><ul><li>Consider a very simple economy, it consists of two people who consume two commodities with fixed supplies.</li><li>The only economic problem here is to allocate amonts of two goods between the two people.</li><li><strong>Edgeworth Box</strong><ul><li>An analytical device to depict the distribution of two commodities between two people.</li><li>The length of <em>Edgeworth Box</em> represents the total number of one commodity avaliable in the economy, the height of it represents the total number of another commodity.</li><li>Thus, any point in the <em>Edgeworth Box</em> represents some allocation of two commodities between two people.</li><li>The conventional shaped <em>indifference curves</em> are superimposed onto the <em>Edgeworth Box</em>.</li></ul></li><li><strong>Pareto Efficiency</strong><ul><li>An allocation of resources such that no person can be made better off without making another person worse off. It musrt be a point at which the indifference curves of two people are barely touched.</li><li>Pareto Improvement, a reallocation of resources that make one person better off without making anyone else worse off.</li><li>The locus of all the Pareto efficient points is called the contract curve.</li><li>In economic terms, the absolute value of the slope of the indifference curve indicates the rate at which the individual is willing to trade one good for an additional amont of another, called the marginal rate of substitution ($MRS$). Hence, Pareto efficiency requires that marginal rates of substitution be equal for all consumers: $MRS^{m} = MRS^{n}$.</li></ul></li></ul></li><li><p><strong>Production Economy</strong></p><ul><li>Consider the productive inputs can shift between the production of two commodities, the quantities of two goods can change.</li><li><strong>Production Possiblities Curve</strong><ul><li>The production possibilities curve shows the maximum quantity of one good that can be produced with any given quantity of another good.</li><li>Marginal Rate of transformation ($MRT$), the rate at which the economy can transform one good into another good, it’s the absolute value of slope of the production possibilities frontier.</li><li>It’s useful to express the marginal rate of transformation in terms of marginal cost ($MC$), the incremental cost of producing one more unit of output: $MRT_{ab} = \frac{MC_a}{MC_b}$.</li><li>The condition for Pareto efficiency is $MRT_{ab} = MRS^m_{ab} = MRS_{ab}^n$ or $\frac{MC_a}{MC_b} = MRS^m_{ab} = MRS_{ab}^n$</li></ul></li></ul></li><li><strong>The First Fundamental Theorem of Welfare Economics</strong></li></ul><ul><li><strong>The Second Fundamental Theorem of Welare Economics</strong></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Lecture Review</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Book Reading 1 (DL/CNN)</title>
     <link href="/2023/10/31/Book-Reading-1-DL-CNN/"/>
     <url>/2023/10/31/Book-Reading-1-DL-CNN/</url>

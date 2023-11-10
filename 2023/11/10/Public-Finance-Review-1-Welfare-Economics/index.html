@@ -16,22 +16,22 @@
   <meta name="author" content="无心道人">
   <meta name="keywords" content="">
   
-    <meta name="description" content="章节概述 书籍：Dive into Deep Learning (pytorch) 本章主要介绍卷积神经网络 (convolutional neural network，CNN) 是一类强大的、为处理图像数据而设计的神经网络。我们之前讨论的多层感知机十分适合处理表格数据，其中行对应样本，列对应特征。对于表格数据，我们寻找的模式可能涉及特征之间的交互，但是我们不能预先假设任何与特征交互相关的先验结构">
+    <meta name="description" content="Welfare Economics Definition  The brunch of economic theory concerned with the social desirability of alternative economic state.  The theory is used to distinguish the circumstances under which marke">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Book Reading 1 (DL&#x2F;CNN)">
-<meta property="og:url" content="https://ttthinker.github.io/2023/10/31/Book-Reading-1-DL-CNN/index.html">
+<meta property="og:title" content="Public Finance Review 1 (Welfare Economics)">
+<meta property="og:url" content="https://ttthinker.github.io/2023/11/10/Public-Finance-Review-1-Welfare-Economics/index.html">
 <meta property="og:site_name" content="蓬室">
-<meta property="og:description" content="章节概述 书籍：Dive into Deep Learning (pytorch) 本章主要介绍卷积神经网络 (convolutional neural network，CNN) 是一类强大的、为处理图像数据而设计的神经网络。我们之前讨论的多层感知机十分适合处理表格数据，其中行对应样本，列对应特征。对于表格数据，我们寻找的模式可能涉及特征之间的交互，但是我们不能预先假设任何与特征交互相关的先验结构">
+<meta property="og:description" content="Welfare Economics Definition  The brunch of economic theory concerned with the social desirability of alternative economic state.  The theory is used to distinguish the circumstances under which marke">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-31T03:20:14.000Z">
-<meta property="article:modified_time" content="2023-11-07T03:37:19.781Z">
+<meta property="article:published_time" content="2023-11-10T10:55:12.000Z">
+<meta property="article:modified_time" content="2023-11-10T12:00:46.610Z">
 <meta property="article:author" content="无心道人">
-<meta property="article:tag" content="Book">
+<meta property="article:tag" content="Lecture Review">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Book Reading 1 (DL/CNN) - 蓬室</title>
+  <title>Public Finance Review 1 (Welfare Economics) - 蓬室</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Book Reading 1 (DL/CNN)"></span>
+            <span id="subtitle" data-typed-text="Public Finance Review 1 (Welfare Economics)"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-31 11:20" pubdate>
-          2023年10月31日 上午
+        <time datetime="2023-11-10 18:55" pubdate>
+          2023年11月10日 晚上
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.2k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          18 分钟
+          19 分钟
         
       </span>
     
@@ -273,50 +273,56 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Book Reading 1 (DL/CNN)</h1>
+            <h1 style="display: none">Public Finance Review 1 (Welfare Economics)</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="章节概述"><a href="#章节概述" class="headerlink" title="章节概述"></a>章节概述</h3><ul>
-<li>书籍：Dive into Deep Learning (pytorch)</li>
-<li>本章主要介绍卷积神经网络 (convolutional neural network，CNN) 是一类强大的、为处理图像数据而设计的神经网络。我们之前讨论的多层感知机十分适合处理表格数据，其中行对应样本，列对应特征。对于表格数据，我们寻找的模式可能涉及特征之间的交互，但是我们不能预先假设任何与特征交互相关的先验结构。此时，多层感知机可能是最好的选择，然而对于高维感知数据，这种缺少结构的网络可能会变得不实用。</li>
-</ul>
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li>不变性<ul>
-<li><strong>平移不变性 (translation invariance)</strong>:不管检测对象出现在图像中的哪个位置，神经网络的前面几层应该对相同的图像区域具有相似的反应，即为“平移不变性”。</li>
-<li>首先，多层感知机的输入是二维图像 $X$，其隐藏表示 $H$ 在数学上是一个矩阵，在代码中表示为二维张量。其中 $X$ 和 $H$ 具有相同的形状。为了方便理解，我们可以认为，无论是输入还是隐藏表示都拥有空间结构。</li>
-<li>使用 $[X]_{ij}$ 和 $[H]_{ij}$分别作为图像和隐藏表示中位置为 $(i, j)$ 中的像素。</li>
-<li>全连接层的隐藏表示为 $[H]_{ij} = \sum_{k}\sum_{l}[W]_{ijkl}[X]_{kl} + [U]_{ij}$</li>
-<li>考虑平移不变性，则隐藏表示为 $[H]_{ij} = \sum_k\sum_l[W]_{kl}[X]_{kl} + [U]$</li>
-<li>这意味着检测对象在输入 $X$ 中的平移，应该仅导致隐藏表示 $H$ 中的平移。也就是说，$W$ 和 $U$ 实际上不依赖于 $(i, j)$ 的值。</li>
+                <h3 id="Welfare-Economics"><a href="#Welfare-Economics" class="headerlink" title="Welfare Economics"></a>Welfare Economics</h3><ul>
+<li><p><strong>Definition</strong></p>
+<ul>
+<li><p>The brunch of economic theory concerned with the social desirability of alternative economic state.</p>
+</li>
+<li><p>The theory is used to distinguish the circumstances under which markets can be expected to perform well from those under which markets fail to produce desirable results.</p>
+</li>
 </ul>
 </li>
-<li>局部性<ul>
-<li><strong>局部性 (locality)</strong>: 神经网络的前面几层应该只探索输入图像中的局部区域，而不过度在意图像中相隔较远区域的关系，这就是“局部性”原则。最终，可以聚合这些局部特征，以在整个图像级别进行预测。</li>
-<li>为了收集用来训练参数 $[H]_{i,j}$ 的相关信息，我们不应偏离到距 $(i, j)$ 很远的地方。</li>
-<li>考虑局部性，则隐藏表示为 $[H]_{ij} = \sum_{-\Delta}^{\Delta}\sum_{-\Delta}^{\Delta}[W]_{ab}[X]_{i+a,j+b} + [U]$</li>
-<li>简而言之，上述隐藏表示是一个<strong>卷积层 (convolutional layer)</strong>，而卷积神经网络是包含卷积层的一类特殊的神经网络。在深度学习研究社区中，V被称为<strong>卷积核 (convolution kernel)</strong>或者<strong>滤波器 (filter)</strong>，亦或简单地称之为该卷积层的权重，通常该权重是可学习的参数。</li>
+<li><p><strong>Pure Economy Exchange</strong></p>
+<ul>
+<li>Consider a very simple economy, it consists of two people who consume two commodities with fixed supplies.</li>
+<li>The only economic problem here is to allocate amonts of two goods between the two people.</li>
+<li><strong>Edgeworth Box</strong><ul>
+<li>An analytical device to depict the distribution of two commodities between two people.</li>
+<li>The length of <em>Edgeworth Box</em> represents the total number of one commodity avaliable in the economy, the height of it represents the total number of another commodity.</li>
+<li>Thus, any point in the <em>Edgeworth Box</em> represents some allocation of two commodities between two people.</li>
+<li>The conventional shaped <em>indifference curves</em> are superimposed onto the <em>Edgeworth Box</em>.</li>
 </ul>
 </li>
-<li>评述 1<ul>
-<li>当图像处理的局部区域很小时，卷积神经网络与多层感知 机的训练差异可能是巨大的:以前，多层感知机可能需要数十亿个参数来表示网络中的一层，而现在卷积神 经网络通常只需要几百个参数，而且不需要改变输入或隐藏表示的维数。</li>
-<li>参数大幅减少的代价是，我们的特征现在是平移不变的，并且当确定每个隐藏活性值时，每一层只包含局部的信息。以上所有的权重学习都将 依赖于归纳偏置。当这种偏置与现实相符时，我们就能得到样本有效的模型，并且这些模型能很好地泛化到 未知数据中。但如果这偏置与现实不符时，比如当图像不满足平移不变时，我们的模型可能难以拟合我们的训练数据。</li>
-<li>CNN主要依靠平移不变性与局部性对全连接神经网络参数结构进行简化，同时保留其空间结构。但这个当这两个性质不满足时效果将大打折扣。</li>
+<li><strong>Pareto Efficiency</strong><ul>
+<li>An allocation of resources such that no person can be made better off without making another person worse off. It musrt be a point at which the indifference curves of two people are barely touched.</li>
+<li>Pareto Improvement, a reallocation of resources that make one person better off without making anyone else worse off.</li>
+<li>The locus of all the Pareto efficient points is called the contract curve.</li>
+<li>In economic terms, the absolute value of the slope of the indifference curve indicates the rate at which the individual is willing to trade one good for an additional amont of another, called the marginal rate of substitution ($MRS$). Hence, Pareto efficiency requires that marginal rates of substitution be equal for all consumers: $MRS^{m} = MRS^{n}$.</li>
 </ul>
 </li>
-<li>卷积<ul>
-<li>在数学中, 两个函数 (比如 $f, g$ : $\left.\mathbb{R}^d \rightarrow \mathbb{R}\right)$ 之间的 “卷积” 被定义为$(f * g)(x)=\int_{-\infty}^{+\infty} f(z) g(x-z) dz$</li>
-<li>一维离散形式：$(f*g)(i) = \sum_{a}f(a)g(i-a)$</li>
-<li>二维离散形式：$(f*g)(i,j) = \sum_a\sum_bf(a,b)g(i-a,j-b)$</li>
-<li>对比隐藏表示：$[H]_{ij} = \sum_{-\Delta}^{\Delta}\sum_{-\Delta}^{\Delta}[W]_{ab}[X]_{i+a,j+b} + [U]$ 可以发现这里不是使用 $(i + a, j + b)$，而是使用差值。其运算实际为互相关运算，但与卷积运算匹配。</li>
 </ul>
 </li>
-<li>通道<ul>
-<li>考虑到图像的颜色，其值表示为三种原色，所以图像表示为 $[X]_{lmn}$，对应卷积表示为 $[W]_{abc}$，隐藏表示为 $[H]_{ijk}$。这可以看作一些相互堆叠的二维网络。可以将其想象为一系列具有二维张量的 <strong>通道（Channel）</strong>。这些通道有时也被称为 <strong>特征映射（Feature Maps）</strong>。因为每个通道都向后续层提供一组空间化的学习特征。多个输入和输出通道使模型在每个空间位置可以获取图像的多方面特征。</li>
-<li>隐藏表示为：$[H]_{ijd} = \sum_{a = -\Delta}^{\Delta} \sum_{b = -\Delta}^{\Delta} \sum_c [W]_{abcd}[X]_{i+a,j+b,c}$，其中隐藏表示 $H$ 中的索引 $d$ 表示输出通道，而随后的输出将继续以三维张量$H$ 作为输入进入下一个卷积层。</li>
+<li><p><strong>Production Economy</strong></p>
+<ul>
+<li>Consider the productive inputs can shift between the production of two commodities, the quantities of two goods can change.</li>
+<li><strong>Production Possiblities Curve</strong><ul>
+<li>The production possibilities curve shows the maximum quantity of one good that can be produced with any given quantity of another good.</li>
+<li>Marginal Rate of transformation ($MRT$), the rate at which the economy can transform one good into another good, it’s the absolute value of slope of the production possibilities frontier.</li>
+<li>It’s useful to express the marginal rate of transformation in terms of marginal cost ($MC$), the incremental cost of producing one more unit of output: $MRT_{ab} = \frac{MC_a}{MC_b}$.</li>
+<li>The condition for Pareto efficiency is $MRT_{ab} = MRS^m_{ab} = MRS_{ab}^n$ or $\frac{MC_a}{MC_b} = MRS^m_{ab} = MRS_{ab}^n$</li>
 </ul>
 </li>
+</ul>
+</li>
+<li><strong>The First Fundamental Theorem of Welfare Economics</strong></li>
+</ul>
+<ul>
+<li><strong>The Second Fundamental Theorem of Welare Economics</strong></li>
 </ul>
 
                 
@@ -330,7 +336,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Book/">#Book</a>
+        <a href="/tags/Lecture-Review/">#Lecture Review</a>
       
     </div>
   
@@ -342,8 +348,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Book Reading 1 (DL/CNN)</div>
-      <div>https://ttthinker.github.io/2023/10/31/Book-Reading-1-DL-CNN/</div>
+      <div>Public Finance Review 1 (Welfare Economics)</div>
+      <div>https://ttthinker.github.io/2023/11/10/Public-Finance-Review-1-Welfare-Economics/</div>
     </div>
     <div class="license-meta">
       
@@ -355,7 +361,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月31日</div>
+          <div>2023年11月10日</div>
         </div>
       
       
@@ -387,18 +393,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/10/Public-Finance-Review-1-Welfare-Economics/" title="Public Finance Review 1 (Welfare Economics)">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Public Finance Review 1 (Welfare Economics)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/31/Paper-Reading%201-ML/" title="Paper Reading 1 (ML)">
-                        <span class="hidden-mobile">Paper Reading 1 (ML)</span>
+                      <a href="/2023/10/31/Book-Reading-1-DL-CNN/" title="Book Reading 1 (DL/CNN)">
+                        <span class="hidden-mobile">Book Reading 1 (DL/CNN)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
