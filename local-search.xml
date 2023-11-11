@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>Public Finance Review 3 (Externalities)</title>
+    <link href="/2023/11/11/Public-Finance-Review-3-Externalities/"/>
+    <url>/2023/11/11/Public-Finance-Review-3-Externalities/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Public Finance Review 2 (Public Goods)</title>
+    <link href="/2023/11/11/Public-Finance-Review-2-Public-Goods/"/>
+    <url>/2023/11/11/Public-Finance-Review-2-Public-Goods/</url>
+    
+    <content type="html"><![CDATA[<h3 id="Public-Goods"><a href="#Public-Goods" class="headerlink" title="Public Goods"></a>Public Goods</h3><ul><li>Characteristics of goods<ul><li><strong>nonexcludable</strong>: To prevent anyone from consuming the good is very expensive or impossible.</li><li><strong>nonrivial</strong>: Once it is provided, the additional resources cost of another person consuming the good is zero.</li></ul></li><li><strong>Public goods</strong>:<ul><li>A commodity that is nonexcludable and nonrival in consumption (impure / pure).</li><li>When a commodity is excludable and nonrival, it can be called <strong>natural monopoly</strong>.</li><li>When a commodity is nonexcludable and rival, it can be called <strong>common resource</strong>.</li><li>When a commodity is excludable and rival, it can be called <strong>private goods</strong>.</li><li>The characteristics of goods depend on the state of technology and on legal arrangements.</li><li>Private goods are not necessary provided exclusively by the private sector. (<strong>publicly provided private goods</strong>)</li><li>Public provision of good does not necessarily mean that it is also produced by the public sector.</li></ul></li><li>Efficient Provision of Private Goods<ul><li>Consider the private goods first. In consumer theory, a utility maximizing individual sets the $MRS_{ab} = \frac{P_a}{P_b}$.</li><li>Since only relative price matter for rational choice, $P_b$ can be arbitrarily set at any value, for convenience, set $P_b = 1$. Thus, $P_a$ can measure the rate at which an individual is willing to substitute a for b. Therefore, the demand curve shows the $MRS_{ab}$ at each level of b consumption. In the same way, the supply curve shows the $MRT_{ab}$ at each level of b consumption. </li><li>We just need to make a horizontal summation of the demand curves, and the point of intersection satisfies: $MRS_{ab}^m = MRS_{ab}^n = MRT_{ab}$.</li></ul></li><li>Efficient Provision of Public Goods<ul><li>Due to the nonrivalness and nonexcludability of public goods, we need to make a vertical summation of demand curve to aggregate the prices each individual is willing to pay for a given quantity of good.</li><li>The equlibrium is characterised by the condition: $MRS_{ab}^m + MRS_{ab}^n = MRT_{ab}$.</li></ul></li><li><strong>Free Rider</strong><ul><li>People don’t need to reveal their true preference because there is the incentive to let other people pay for a public good while you enjoy the benefit.</li></ul></li><li><strong>Perfect Price Discrimination</strong> (Solution for free rider)</li><li><ul><li>A producer charges each person the maximum he or she is willing to pay for the good.</li><li>It occurs when the entrepreneur knows each person’s demand curve for the public good.</li></ul></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Lecture Review</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Public Finance Review 1 (Welfare Economics)</title>
     <link href="/2023/11/10/Public-Finance-Review-1-Welfare-Economics/"/>
     <url>/2023/11/10/Public-Finance-Review-1-Welfare-Economics/</url>
